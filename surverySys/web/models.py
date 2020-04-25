@@ -16,7 +16,7 @@ class Survey(models.Model):
     """
     grade = models.ForeignKey('ClassList', on_delete=models.CASCADE, verbose_name='班级')
     times = models.PositiveSmallIntegerField(verbose_name='第几次')
-    survey_templates = models.ManyToManyField('SurveyTemplate', verbose_name='问卷模板')
+    survey_templates = models.ManyToManyField('SurveyTemplate', blank=True, verbose_name='问卷模板')
     count = models.PositiveSmallIntegerField("生成的唯一码数量")
     date = models.DateTimeField(auto_now_add=True, verbose_name='创建时间')
 
