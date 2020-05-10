@@ -1,0 +1,15 @@
+{% extends 'web/public/base.html' %}
+{% block body %}
+    <div id="app" class="panel panel-success">
+        <div class="panel-heading">
+            <div class="panel-title">欢迎使用问卷调查系统</div>
+        </div>
+        <div class="panel-body">
+            {% block page-content %}
+            {% endblock %}
+        </div>
+        <div class="panel-footer">
+            CopyRight 2020
+        </div>
+    </div>
+{% endblock %}
